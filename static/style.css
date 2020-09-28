@@ -1,0 +1,52 @@
+/*#nav{
+	width: 100%;
+	height: 10%;
+	background-color: black;
+	position: absolute;
+}
+#navlogo{
+		width: 19%;
+	height: 50%;
+	position: absolute;
+	background-color: blue;
+	border-radius: 50%;
+	left: 20%;
+	overflow: hidden;
+
+}
+#profileHeader{
+	width: 100%;
+	height: 70%;
+	position: absolute;
+	background-color: none;
+	border: 2px solid black;
+}
+.imgBox{
+	width: 19%;
+	height: 50%;
+	position: absolute;
+	background-color: black;
+	border-radius: 50%;
+	left: 20%;
+	overflow: hidden;
+}
+.profile_detail{
+	width: 40%;
+	height: 50%;
+	position: absolute;
+	background-color: white;
+	
+	left: 45%;
+	overflow: hidden;
+}
+#profilePost{
+	width: 80%;
+	height: auto;
+	position: absolute;
+	background-color: none;
+	border: 2px solid black;
+	top:75%;
+	left: 10%
+
+}
+*/

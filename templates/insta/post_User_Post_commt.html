@@ -1,0 +1,28 @@
+ {% extends 'base.html'%}
+
+  {% block contect %}
+	<section class="text-gray-700 body-font relative">
+  <div class="container  mx-auto" >
+  	 <div class="p-2 w-full  border-t border-gray-200 text-center">
+  	 	<div style="margin-left: 350px;">
+
+	<img src="{{profile_D.pic.url}}" width="400px">
+</div>
+	{% for c in commt%}
+	<ul>
+		<li>{{c.you_msg}}  <small><i>{{c.commt}}</i></small></li>
+	</ul>		
+	
+	{%endfor %}
+	   <form method="POST">
+            	{% csrf_token %}
+           <input type="text" name="post" value="{{profile_D.id}}" hidden><br>
+       <input type="text" name="you_msg" class="bg-white rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base w-50 h-25"  placeholder="Comment" >
+             
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Comment</button>
+        
+    </form>
+</div>
+	</div></section>
+	
+{% endblock%}

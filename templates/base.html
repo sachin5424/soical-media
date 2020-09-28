@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <title>Facebok</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="text-gray-700 body-font bg-black">
+  <div class="container flex flex-wrap p-5 flex-col md:flex-row items-center ">
+   
+    <a class="flex mr-auto ml-auto order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white-900 lg:items-center lg:justify-center mb-4 md:mb-0" href="{% url 'facebook:home' %}">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24" >
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">tailblocks</span>
+    </a>
+     <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+   
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-15 h-10" viewBox="0 0 24 24">
+            <!-- <img src="{{profile_D.profile_pic.url}}" style="border-radius: 50%"> -->
+            <h1 style="color: white"><a href="{% url 'facebook:profile_detail_user' request.user %}">{{request.user.username}}</a></h1>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+      
+    </div>
+  </div>
+  </div>
+   
+</header>
+
+
+   {%block contect %}
+    {%endblock %}
+</body>
+</html>
+ 
